@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activities.LoginActivity">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="Sign in to continue" />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    app:materialIcon="email"
+                    app:materialIconColor="@color/colorAccent" android:layout_marginRight="8dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_text_input"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_email_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    app:materialIcon="lock"
+                    app:materialIconColor="@color/colorAccent"
+                    android:layout_marginRight="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_text_input"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.dx.dxloadingbutton.lib.LoadingButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:lb_btnColor="@color/colorAccent"
+                app:lb_btnText="Login"
+                app:lb_cornerRadius="48"
+                app:lb_resetAfterFailed="true" />
+
+
+
+        <TextView
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorAccent"
+                android:text="Don't have an account? Register"
+                android:textAllCaps="false" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
