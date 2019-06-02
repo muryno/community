@@ -1,10 +1,13 @@
 package com.muryno.community.utils
 
+import android.app.Activity
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.ConnectivityManager
 import android.os.Environment
 import android.text.TextUtils
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import com.muryno.community.MainApplication
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -31,7 +34,7 @@ fun isOnline(): Boolean {
     return activeNetwork != null && activeNetwork.isConnected
 }
 
-private fun isValidEmail(email: String): Boolean {
+ fun isValidEmail(email: String): Boolean {
     return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
 }
 
@@ -82,4 +85,19 @@ fun getCompressedFile(path: String, context: Context?): File? {
 
     fileOutputStream.close()
     return mainFile
+}
+
+
+fun showKeyboard(activity: Activity) {
+    val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
+}
+
+fun hideKeyboard(activity: Activity) {
+    val imm = activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    var view = activity.currentFocus
+    if (view == null) {
+        view = View(activity)
+    }
+    imm.hideSoftInputFromWindow(view.windowToken, 0)
 }

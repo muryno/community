@@ -114,6 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:padding="20dp"
                 android:gravity="center_horizontal"
                 android:textColor="@color/colorAccent"
                 android:text="Don't have an account? Register"

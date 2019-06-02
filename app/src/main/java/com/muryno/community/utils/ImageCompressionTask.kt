@@ -17,11 +17,10 @@ class ImageCompressionTask: Runnable {
     private var mContext: Context? = null
     private val compressed = ArrayList<File>()
 
-    constructor(
+    constructor( context: Context,
         taskListener: IImageCompressionTaskListener,
-        id: Int,
-        source: List<String>,
-        context: Context
+                 source: List<String>,
+        id: Int
     ) {
 
         mContext = context

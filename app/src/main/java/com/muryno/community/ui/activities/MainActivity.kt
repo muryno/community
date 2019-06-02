@@ -1,7 +1,8 @@
-package com.muryno.community
+package com.muryno.community.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.muryno.community.R
 
 class MainActivity : AppCompatActivity() {
 

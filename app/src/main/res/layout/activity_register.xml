@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.core.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="24dp"
+        android:orientation="vertical"
         android:background="@color/shimmerBase0"
         tools:context=".ui.activities.RegisterActivity">
 
-    <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -38,6 +35,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
+
                         app:backgroundTint="@color/colorAccent"
                         android:src="@android:drawable/ic_menu_camera"
                         app:fabSize="mini"
@@ -56,20 +54,70 @@
                         style="@style/TextInputLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Fullname"
+                        android:hint="First name"
                         app:errorEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/fname_edit_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Full name"
 
                             android:textColor="@color/black"
                             android:textColorHint="@color/black"
                             android:inputType="textCapSentences" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lname_text_input"
+                        style="@style/TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Last name"
+                        app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/lname_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:inputType="textCapSentences" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phone_text_input"
+                        style="@style/TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone number"
+                        app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phone_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:inputType="phone" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -91,7 +139,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
-                            android:hint="Email"
                             android:textColorHint="@color/black"
                             android:inputType="textCapSentences" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -121,14 +168,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
-                            android:hint="Password"
                             android:textColorHint="@color/black"
                             android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <com.dx.dxloadingbutton.lib.LoadingButton
-                    android:id="@+id/btn_login"
+                    android:id="@+id/btn_regr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:lb_btnColor="@color/colorAccent"
@@ -138,5 +184,5 @@
 
 
         </LinearLayout>
-    </FrameLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.core.widget.NestedScrollView>
