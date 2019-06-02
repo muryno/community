@@ -19,7 +19,7 @@ interface ApiInterface {
     ): Call<BaseData<User>>
 
     @FormUrlEncoded
-    @POST("api/user/login")
+    @POST("user/login")
     fun login(@Field("email") email:String,@Field("password") paswrd:String)
             :Call<BaseData<User>>
 

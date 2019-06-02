@@ -48,6 +48,8 @@ class LoginPresenter : Callback<BaseData<User>> {
             }else{
                 callback?.loadingFailed(response.message())
             }
-        }    }
+        } else{
+            callback?.loadingFailed(response.message())
+        }   }
 
 }
